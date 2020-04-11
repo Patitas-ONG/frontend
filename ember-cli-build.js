@@ -10,6 +10,7 @@ module.exports = function(defaults) {
     },
     sassOptions: {
       extension: 'scss',
+      includePaths: ['node_modules/css-reset-and-normalize-sass/scss'],
     },
   });
 

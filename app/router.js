@@ -15,8 +15,6 @@ Router.map(function() {
     this.route('new');
     this.route('edit');
   });
-  this.route('person');
-
   this.route('user', function() {
     this.route('new');
     this.route('edit');
