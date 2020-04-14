@@ -26,7 +26,8 @@ export default Factory.extend({
     story.update({
       user: server.create('user'),
       pet: server.create('pet'),
-      location: server.create('location')
+      location: server.create('location'),
+      photos: server.createList('photo', Math.floor(Math.random() * 10))
     });
   }
 });

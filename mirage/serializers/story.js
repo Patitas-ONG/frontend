@@ -6,6 +6,6 @@ export default ApplicationSerializer.extend({
 
   init() {
     this._super(...arguments);
-    this.include = ['user', 'pet', 'location']
+    this.include = ['user', 'pet', 'location', 'photos']
   }
 });

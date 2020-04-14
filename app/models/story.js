@@ -1,4 +1,4 @@
-import Model, { attr, belongsTo } from '@ember-data/model';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 
 export default class StoryModel extends Model {
   @attr('string') description;
@@ -8,4 +8,5 @@ export default class StoryModel extends Model {
   @belongsTo('user') user;
   @belongsTo('pet') pet;
   @belongsTo('location') location;
+  @hasMany('photo') photos;
 }

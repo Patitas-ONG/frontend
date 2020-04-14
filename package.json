@@ -1,5 +1,5 @@
 {
-  "name": "patitas",
+  "name": "@patitas/app",
   "version": "0.0.0",
   "private": true,
   "description": "Small description for patitas goes here",
@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "css-reset-and-normalize-sass": "^0.1.2",
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "list": "^2.0.19"
   }
 }
