@@ -1,16 +1,38 @@
 'use strict';
 
+const postcssMergeRules = require('postcss-merge-rules');
+const autoprefixer = require('autoprefixer');
+
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    outputPaths: {
+      app: {
+        css: {
+          'app': '/assets/patitas.css'
+        },
+        js: '/assets/patitas.js'
+      },
+      vendor: {
+        css: '/assets/vendor.css',
+        js: '/assets/vendor.js'
+      }
+    },
     cssModules: {
       extension: 'module.scss',
       intermediateOutputPath: 'app/styles/_modules.scss',
+      postcssOptions: {
+        syntax: require('postcss-scss')
+      },
+      plugins: [
+        autoprefixer(['last 2 versions', 'ie 11']),
+        postcssMergeRules()
+      ]
     },
     sassOptions: {
       extension: 'scss',
-      includePaths: ['node_modules/css-reset-and-normalize-sass/scss'],
+      includePaths: ['../../node_modules/css-reset-and-normalize-sass/scss'],
     },
   });
 

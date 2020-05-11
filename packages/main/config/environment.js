@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'patitas',
+    modulePrefix: '@patitas/main',
     environment,
     rootURL: '/',
     locationType: 'auto',
